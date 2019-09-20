@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout1</title>
+    <style>
+        body{
+            width: 960px;
+            margin: 20px auto 0 auto;
+        }
+        div, footer{
+            background: silver;
+        }
+        nav, section, main, footer{
+            display: grid;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        
+        nav{
+            grid-template: 80px / 200px 1fr;
+            grid-gap: 20px;
+        }
+
+        nav div:last-of-type{
+            display: flex;
+            height: 40px;
+            width: 460px;
+            justify-content: center;
+            align-self: center;
+            align-items: center;
+            justify-self: end;
+        }
+        ul{
+            
+            padding: 0;
+        }
+        nav ul li{
+           display: inline; 
+           margin: 37px;
+           
+        }
+        .productImage{
+            height:400px;
+        }
+        .products{
+            display: grid;
+            grid-template: 180px / repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+
+        footer{
+            height: 60px;
+            align-items: center;
+            justify-content: center;
+            
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+        <div>Company Logo</div>
+        <div>
+            <ul>
+                    <li>Item1</li>
+                    <li>Item2</li>
+                    <li>Item3</li>
+                    <li>Item4</li>
+                </ul>
+        </div>
+    </nav>
+    <section>
+        <div class="productImage">
+                Featured Product Image
+        </div>
+    </section>
+    <section class="products">
+        <div>Product1</div> 
+        <div>Product2</div> 
+    </section>
+    <footer>
+        <p>Copyright Notice</p>
+</body>
+</html>

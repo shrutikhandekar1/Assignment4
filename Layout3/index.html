@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout1</title>
+    <style>
+        body{
+            width: 960px;
+            min-height: 600px;
+            margin: 20px auto;
+        }
+        h1{
+            font-size: 50px;
+            margin: 0;
+        }
+
+        div, footer, .productInfo{
+            background: silver;
+        }
+       section{
+            display: grid;
+            width: 100%;
+        }
+        main{
+            display: grid;
+            grid-template: 80px 290px 60px 360px 40px / repeat(12, 1fr);
+            grid-gap: 20px;
+        }
+        
+        nav{ grid-row: 1 / 2; grid-column: 1 / span 12;}
+        .productInfo{ grid-row: 2 / 3; grid-column: 1 / span 12;}
+        .title{ grid-row: 3 / 4; grid-column: 1 / span 12;}
+        .blogpost{ grid-row: 4 / 5; grid-column: 1 / span 6;}
+        .featuredItem{ grid-row: 4 / 5; grid-column: 7 / span 6;}
+        footer{ grid-row: 5 / 6; grid-column: 1 / span 12;}
+
+        nav{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            
+        }
+        nav div:first-of-type{
+            width: 190px;
+        }
+        nav div:last-of-type{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            justify-self: end;
+            align-self: center;
+        }
+        ul{
+            padding: 0;
+        }
+        ul li{
+            display: inline;
+            padding: 37px;
+        }
+
+        .title{            
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+        .title div{
+            width: 230px;
+        }
+        
+        .blogpost{
+            display: grid;
+            grid-template-rows: repeat(2, 1fr);
+            grid-gap: 20px;
+            
+        }
+        .featuredItem{
+            display: grid;
+            grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+            grid-gap: 20px;
+        }
+        footer{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+        }
+        
+    </style>
+</head>
+<body>
+    <main>
+    <nav>
+        <div>Company Logo</div>
+        <div>
+            <ul>
+                <li>Item1</li>
+                <li>Item2</li>
+                <li>Item3</li>
+                <li>Item4</li>
+            </ul>
+                
+        </div>
+    </nav>
+        <section class="productInfo">
+            <h1>Lorem ipsum dolor sit amet, ne saepe phaedrum cotidieque has. natum zril pro ei.
+                </h1>
+            <h2>Cu vel aliquid lobortis deseruisse. Nam at adipisci dignissim forensibus. Qui an recteque maliusset assentior, cu ferri aperiam imperdiet sed.</h2>
+        </section>
+        <section class="title">
+            <div>title</div>
+            <div>title</div>
+        </section>
+        <section class="blogpost">
+            <div class="item">Blog Post 1</div>
+            <div class="item">Blog Post 2</div>
+        </section>
+        <section class="featuredItem">
+            <div>Featured Product 1</div>
+            <div>Featured Product 2</div>
+            <div>Featured Product 3</div>
+            <div>Featured Product 4</div>
+        </section>
+        <footer>
+                <p>Copyright Notice</p>
+        </footer>
+    </main> 
+
+</body>
+</html>
